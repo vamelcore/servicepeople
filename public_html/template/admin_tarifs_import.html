@@ -1,0 +1,27 @@
+  <div class="content-wrapper">
+    <section class="content-header"><h1>Импорт тарифов</h1></section>
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Импорт тарифов из файла <b>CSV</b> (скачать пример <a href="/data/docs/primer.csv">по ссылке</a>).</h3> Файл создается с разделителем полей точка с запятой
+            </div>
+            <form role="form" enctype='multipart/form-data' action='' method='POST' id="getcsv">
+              <div class="box-body forma">
+                <div class="form-group">
+                  <label for="exampleInputFile">Загрузка файла</label>
+                  <input type="file" id='import' name='import'>
+                  <p class="help-block">После выбора файла, подождите для подгрузки информации в новый блок ниже.</p>
+                </div>
+              </div>
+							<div class="box-body text-center" id="messageImport"></div>
+              <div class="box-footer" style="display:none">
+                <button type="submit" name='importButton' class="btn btn-primary">Импортировать</button>
+              </div>
+            </form>
+          </div>
+				</div>
+			</div>
+    </section>
+  </div>

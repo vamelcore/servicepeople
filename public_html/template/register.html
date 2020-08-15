@@ -1,0 +1,107 @@
+<div class="register-box">
+  <div class="register-logo">
+    <span><b>Регистрация</b></span>
+  </div>
+
+  <div class="register-box-body">
+    <p class="login-box-msg">Регистрация нового клиента</p>
+
+    <form action="" method="post">
+			<p class="text-center bg-green">Личная информация:</p>
+      <div class="form-group has-feedback">
+				<label>Фамилия Имя Отчество</label>
+        <input type="text" class="form-control warn info" name="fio" placeholder="Фамилия Имя Отчество" onpaste="return false;" required>
+        <span class="glyphicon glyphicon-user form-control-feedback" id="ikonka"></span>
+      </div>
+      <div class="form-group has-feedback">
+				<label>Контактный номер телефона</label>
+        <input type="number" class="raz form-control warn info" name="mobile" placeholder="Контактный номер телефона (89xxxxxxxxx)" onKeyPress="return check(event,value)" onInput="checkLength(11,this)" required>
+        <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+      </div>
+			<p class="text-center bg-green">Паспортные данные:</p>
+      <div class="form-group has-feedback">
+				<div class="input-group width40" style='margin-right:5%;float:left;'>
+					<label>Серия</label>
+					<input type="number" class="form-control raz info" name="passSeriya" placeholder="Серия" onKeyPress="return check(event,value)" onInput="checkLength(4,this)">
+				</div>
+				<div class="input-group width40">
+					<label>Номер</label>
+					<input type="number" class="form-control info" name="passNumber" placeholder="Номер" onKeyPress="return check(event,value)" onInput="checkLength(6,this)">
+        </div>
+				<span class="glyphicon glyphicon-subtitles form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+				<label>Паспорт: кем и когда выдан</label>
+				<textarea class="form-control info" name="passInfo" placeholder="Паспорт: кем и когда выдан"></textarea>
+        <span class="glyphicon glyphicon-subtitles form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+				<label>Паспорт: прописка</label>
+				<textarea class="form-control info" name="passPropiska" placeholder="Паспорт: прописка"></textarea>
+        <span class="glyphicon glyphicon-subtitles form-control-feedback"></span>
+      </div>
+			<div class="form-group has-feedback form-control hidden">
+				<label>Паспорт: скан</label>
+				<p>Скан паспорта</p>
+				<span class="glyphicon glyphicon-th-list form-control-feedback"></span>
+      </div>
+			<div class="form-group has-feedback form-control hidden">
+				<p><input type="file" name="passScan" class="info" id="exampleInputFile"></p>
+      </div>
+			<p class="text-center bg-green">Данные для подключения:</p>
+      <div class="form-group has-feedback">
+				<label>Лицевой счет</label>
+        <input type="number" class="raz form-control warn info" name="login" placeholder="Лицевой счет" onpaste="return false;" onKeyPress="return check(event,value)" onInput="checkLength(8,this)" required>
+        <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+				<label>Адрес установки оборудования</label>
+				<textarea class="form-control warn info" name="address" placeholder="Адрес установки оборудования" required></textarea>
+        <span class="glyphicon glyphicon-globe form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+				<label>Пароль</label>
+        <input type="password" class="form-control warn info password" name="password" placeholder="Пароль" required>
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+				<label>Повтор пароля</label>
+        <input type="password" class="form-control warn info password" name="passwordRepeat" placeholder="Повтор пароля" required>
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="form-group">
+				<span>
+					<input type="checkbox" class="flat-red" name="checkbox" id="checkbox" required>
+						&nbsp;Я <a href='/docs/pravila' target='__blank'>ознакомлен</a> с правилами компании</a>
+				</span>
+			</div>
+      <div class="row">
+        <!-- /.col -->
+        <div class="col-xs-12">
+          <button type="submit" id="addClient" name="addClient" class="btn btn-primary btn-block btn-flat">Регистрация</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+  </div>
+  <!-- /.form-box -->
+</div>
+<!-- /.register-box -->
+
+<!-- jQuery 3 -->
+<script src="/template/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="/template/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="/template/plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' // optional
+    });
+  });
+</script>
+</body>
+</html>

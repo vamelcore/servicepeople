@@ -1,0 +1,47 @@
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>Изменение страницы&nbsp;(<?php $this->getPageTitle(); ?>)</h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+					<input type='hidden' name='pageid' id='pageid' value=<?php $this->getPageId(); ?>>
+          <div class="box box-info">
+            <div class="box-header">
+							<div class='form-group'>
+								<label for='pagetitle' class='col-sm-2 control-label'>Название страницы</label>
+								<div class='col-sm-10'>
+									<input type='text'  class='form-control' name='pagetitle' id='pagetitle' value='<?php $this->getPageTitle(); ?>'/>
+								</div>
+							</div>
+							<div class='form-group'>
+								<label for='pagetitle' class='col-sm-2 control-label'>URL страницы</label>
+								<div class='col-sm-10'>
+									<input type='text'  class='form-control' name='pageurl' id='pageurl' value='<?php $this->getPageUrl(); ?>' disabled/>
+								</div>
+							</div>	
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body pad">
+							<div class='form-group'>
+								<label for='editor1' class='col-sm-2 control-label'>Текст</label>
+									<div class='col-sm-10'>
+										<form><textarea id="editor1" name="editor1" rows="10" cols="80"><?php $this->getPageContent(); ?></textarea></form>
+									</div>
+							</div>
+            </div>
+							<div class="box-footer">
+								<button type='submit' name='editPage' id='editPage' class='btn btn-success btn-success pull-right col-md-6'>Изменить</button>
+              </div>
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col-->
+      </div>
+      <!-- ./row -->
+    </section>
+    <!-- /.content -->
+  </div>

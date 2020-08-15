@@ -1,0 +1,49 @@
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>Список клиентов<small>вывод по алфавиту</small>&nbsp;&nbsp;&nbsp;<a href="/law/clients/registration/new" type="button" class="btn btn-sm btn-success btn-flat">Добавить клиента</a>
+      </h1>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                  <th>ФИО</th>
+									<th>№ счета</th>
+									<th>Симка</th>
+									<th>Дата реги</th>
+                </tr>
+                </thead>
+                <tbody>
+									<?php $this->getAllClients(); ?>
+                </tbody>
+                <tfoot>
+                <tr>
+                  <th>ФИО</th>
+									<th>№ счета</th>
+									<th>Симка</th>
+									<th>Дата реги</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->

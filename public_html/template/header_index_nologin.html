@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+<link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/template/bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="/template/dist/css/style.css">
+<link rel="stylesheet" href="/template/dist/css/engine.css">
+<script src="/template/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/template/bower_components/jquery-ui/jquery-ui.min.js"></script>
+
+</head>
+<body id="bg">
+<div id="layout">
+<header id="header" class="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-3 col-xs-12">
+				<div class="logo">
+				   <a href="/"><img src="/template/dist/img/logo.png" alt="logo"></a>
+				</div>
+				<div class="mobile-nav"></div>
+			</div>
+			<div class="col-md-9 col-sm-9 col-xs-12">
+				<div class="header-widget">
+					<div class="single-widget">
+						<i class="fa fa-clock-o"></i>
+						<h4>Время работы</h4>
+						<p>Пнд-Вск: 09.00-19.00</p>
+					</div>
+					<div class="single-widget">
+						<i class="fa fa-envelope"></i>
+						<h4>Email</h4>
+						<p><a href="mailto:tehinternet@yandex.ru">tehinternet@yandex.ru</a></p>
+					</div>
+					<div class="single-widget">
+						<i class="fa fa-phone"></i>
+						<h4>Телефон</h4>
+						<a href="tel:+79521021575"><p>8-951-548-16-49</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-inner">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<div class="nav-area">
+						<nav class="mainmenu">
+							<div class="collapse navbar-collapse">
+								<ul class="nav navbar-nav">
+									<li class="active"><a href="/">Главная</a></li>
+									<li [static=price]class="active"[/static]><a href="/index#pricing-table">Цены</a></li>							
+									<li [aviable=feedback]class="active"[/aviable]><a href="/index#footer">Контакты</a></li>
+									<li [static=price]class="active"[/static]><a href="/index/docs/view/soglachenie">Пользовательское соглашение</a></li>
+									<li [static=price]class="active"[/static]><a href="/index/login">Личный кабинет</a></li>
+								</ul>
+							</div>
+						</nav>											
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

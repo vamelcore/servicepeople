@@ -1,0 +1,92 @@
+  <div class="content">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+			<div class="alert alert-success alert-dismissible"><h2 class="no-margin">Здравствуйте<?php $this->getTopUserDatas();?></h2></div>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+       <!-- /.col -->
+        <div class="col-md-12">
+          <div class="alert alert-warning alert-dismissible no-margin">
+						<h2 class="no-margin"><i class="icon fa fa-dollar"></i> Оплата</h2>
+          </div>
+					<div class="box box-body no-border">
+						<div class="col-md-6 hidden-xs">
+							<div class="box box-solid">
+								<div class="box-header with-border">
+									<i class="fa fa-info"></i>
+									<h3 class="box-title">Информация</h3>
+								</div>
+								<!-- /.box-header -->
+								<div class="box-body">
+									<blockquote>
+										<p><h3>После проведения оплаты, дождитесь возврата на эту страницу.</h3></p>
+									</blockquote>
+								</div>
+								<!-- /.box-body -->
+							</div>
+						</div>
+							<div class="col-md-6">
+								<div class="box box-info no-border">
+									<?php $this->getPaymentForm(); ?>
+								</div>
+							</div>
+						</div>
+        </div>
+      </div>
+			<div class="row">
+        <div class="col-md-12">
+          <div class="nav-tabs-custom">
+            <div class="bg-purple disabled color-palette alert">
+							<h2 class="no-margin">Статистика оплат</h2>
+            </div>
+            <div class="tab-content">
+              <div class="active tab-pane" id="timeline">
+                <ul class="timeline timeline-inverse">
+									<?php $this->getClientStatisticPayments(); ?>
+                  <li>
+                    <i class="fa fa-clock-o bg-gray"></i>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+          </div>
+          <!-- /.nav-tabs-custom -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+			<!-- Договор оферты -->
+       <div class="modal fade" id="modal-default">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span></button>
+               <h4 class="modal-title text-center">Ознакомьтесь с Договором оферты.</h4>
+             </div>
+             <div class="modal-body">
+               <? $this->getOferta(); ?>
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Не согласен</button>
+               <button type="button" id='agreed' class="btn btn-primary">Согласен</button>
+             </div>
+           </div>
+           <!-- /.modal-content -->
+         </div>
+         <!-- /.modal-dialog -->
+       </div>
+       <!-- /.Договор оферты -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <footer class="main-footer main-footer1">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 0.0.1
+    </div>
+    <strong>Copyright &copy; 2018 <a href="http://localhost">proJect</a>.</strong> All rights reserved.
+  </footer>

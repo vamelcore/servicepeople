@@ -1,0 +1,46 @@
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header"><h1>Список тарифов &nbsp;&nbsp;&nbsp;<a href="/law/tarifs/import/new" type="button" class="btn btn-sm btn-success btn-flat">Импортировать</a></h1></section>
+    </section>
+    <section class="content">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Таблица тарифов</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive">
+              <table id="example4" class="table table-hover">
+                <thead>
+                <tr>
+                  <th>Аккаунт</th>
+                  <th>Занят</th>
+                  <th>Телефон</th>
+                  <th>Тариф</th>
+                  <th>Оплата</th>
+                </tr>
+                </thead>
+								<tbody>
+								<?php $this->getTarifs(); ?>
+								</tbody>
+                <tfoot>
+                <tr>
+                  <th>Аккаунт</th>
+                  <th>Занят</th>
+                  <th>Телефон</th>
+                  <th>Тариф</th>
+                  <th>Оплата</th>
+                </tr>
+                </tfoot>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+ 
+		</section>
+    <!-- /.content -->
+  </div>

@@ -1,0 +1,50 @@
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>Управление клиентом
+      </h1>
+    </section>
+    <!-- Main content -->
+		<section class="content">
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Profile Image -->
+          <div class="box box-primary">
+            <div class="box-body box-profile">
+							<form action="" method="post" class="form-horizontal" id="formEditUser">
+								<div class="box-body">
+									<?php $this->getClientInfo(); ?>
+								</div>
+							</form>
+            </div>
+						<div class="box-footer">
+							<button type="submit" name="editUser" id="editUser" class="btn btn-info pull-right">Изменить</button>
+						</div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+				</div>
+				<div class="col-md-8">
+					<div class="nav-tabs-custom">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#activity" data-toggle="tab">Статистика оплат</a></li>
+						</ul>
+            <div class="tab-content">
+              <div class="active tab-pane" id="activity">
+                <ul class="timeline timeline-inverse">
+									<?php $this->getClientStatisticPayments(); ?>
+                  <li>
+                    <i class="fa fa-clock-o bg-gray"></i>
+                  </li>
+                </ul>
+              </div>
+              <!-- /.tab-pane -->
+            </div>
+					</div>
+				</div>
+			</div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->

@@ -1,0 +1,6 @@
+# .htaccess для админки магазина
+Options -Indexes
+
+<Files *>  
+Deny from all  
+</Files> 

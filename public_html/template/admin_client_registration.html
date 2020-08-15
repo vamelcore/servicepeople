@@ -1,0 +1,137 @@
+<div class="content-wrapper">
+	<section class="content">
+		<div class="row">
+			<div class="register-box client-register">
+				<div class="register-logo">
+					<span><b>Регистрация нового клиента</b></span>
+				</div>
+				<div class="register-box-body">
+					<p class="login-box-msg">Регистрация нового клиента</p>
+					<form action="" method="post">
+						<p class="text-center bg-green">Личная информация:</p>
+						<div class="form-group has-feedback">
+							<label>Фамилия Имя Отчество</label>
+							<input type="text" class="form-control warn info" name="fio" placeholder="Фамилия Имя Отчество" required>
+							<span class="glyphicon glyphicon-user form-control-feedback" id="ikonka"></span>
+						</div>
+						<div class="form-group has-feedback">
+							<label>Контактный номер телефона</label>
+							<input type="number" class="raz form-control warn info" name="mobile" placeholder="Контактный номер телефона (89xxxxxxxxx)" onKeyPress="return check(event,value)" onInput="checkLength(11,this)" required>
+							<span class="glyphicon glyphicon-phone form-control-feedback"></span>
+						</div>
+						<div class="form-group has-feedback">
+							<label>Email клиента</label>
+							<input type="text" class="form-control info" name="email" placeholder="Введите адрес элестронной почты" onInput="checkLength(60,this)">
+							<span class="glyphicon glyphicon-phone form-control-feedback"></span>
+						</div>
+						<p class="text-center bg-green">Паспортные данные:</p>
+						<div class="form-group has-feedback">
+							<div class="input-group width49" style='margin-right:2%;float:left;'>
+								<label>Серия</label>
+								<input type="number" class="form-control warn info" name="passSeriya" placeholder="Серия" onpaste="return false;" onKeyPress="return check(event,value)" onInput="checkLength(4,this)" required>
+							</div>
+							<div class="input-group width49">
+								<label>Номер</label>
+								<input type="number" class="form-control warn info" name="passNumber" placeholder="Номер" onKeyPress="return check(event,value)" onpaste="return false;" onInput="checkLength(6,this)" required>
+							</div>
+							<span class="glyphicon glyphicon-subtitles form-control-feedback"></span>
+						</div>
+						<div class="form-group has-feedback">
+							<div class="input-group width49" style='margin-right:2%;float:left;'>
+								<label>Код подраздел</label>
+								<input type="text" class="form-control warn info" name="passKod" placeholder="XXX-XXX" onpaste="return false;" onInput="checkLength(7,this)" required>
+							</div>
+							<div class="input-group width49">
+								<label>Дата выдачи</label>
+								<input type="text" class="form-control warn info" name="passData" style="padding-right: 20%" data-inputmask="'alias': 'dd.mm.yyyy'" data-mask required>
+							</div>
+							<span class="glyphicon glyphicon-subtitles form-control-feedback"></span>
+						</div>
+						<div class="form-group has-feedback">
+							<label>Кем выдан</label>
+							<textarea class="form-control info" name="passIssued" placeholder="Паспорт: кем выдан" required></textarea>
+							<span class="glyphicon glyphicon-subtitles form-control-feedback"></span>
+						</div>
+						<div class="form-group has-feedback">
+							<div class="input-group width49" style='margin-right:2%;float:left;'>
+								<label>Место рождения</label>
+								<input type="text" class="form-control warn info" name="passBirthdayCity" style="padding-right: 20%" placeholder="Место рождения" onpaste="return false;" onInput="checkLength(100,this)" required>
+							</div>
+							<div class="input-group width49">
+								<label>Дата рождения</label>
+								<input type="text" class="form-control warn info" name="passBirthdayData" style="padding-right: 20%" data-inputmask="'alias': 'dd.mm.yyyy'" data-mask required>
+							</div>
+							<span class="glyphicon glyphicon-subtitles form-control-feedback"></span>
+						</div>
+						<div class="form-group has-feedback">
+							<div class="input-group width49" style='margin-right:2%;float:left;'>
+								<label>Прописка: область</label>
+								<select class="form-control warn info" name="propOblast">
+									<option value='' selected>Выберите область</option>
+									<?php $this->getRegion(); ?>
+								</select>
+							</div>
+							<div class="input-group width49">
+								<label>Прописка: район</label>
+								<input type="text" class="form-control info" name="propRegion" style="padding-right: 20%">
+							</div>
+							<span class="glyphicon glyphicon-subtitles form-control-feedback"></span>
+						</div>
+						<div class="form-group">
+							<div class="input-group width49" style='margin-right:2%;float:left;'>
+								<label>Прописка: город\нас пункт</label>
+								<input type="text" class="form-control warn info" name="propCity" style="padding-right: 20%">
+							</div>
+							<div class="input-group width49">
+								<label>Прописка: улица</label>
+								<input type="text" class="form-control info" name="propStreet" style="padding-right: 20%">
+							</div>
+							<span class="glyphicon glyphicon-subtitles form-control-feedback"></span>
+						</div>
+						<div class="form-group">
+							<div class="input-group width30" style='float:left;'>
+								<label>Прописка: дом</label>
+								<input type="text" class="form-control warn info" name="propHouse" style="padding-right: 20%">
+							</div>
+							<div class="input-group width30" style='margin:0 2%;float:left;'>
+								<label>Прописка: корпус</label>
+								<input type="number" class="form-control info" name="propCorpus" style="padding-right: 20%">
+							</div>
+							<div class="input-group width30">
+								<label>Прописка: квартира</label>
+								<input type="number" class="form-control info" name="propAppart" style="padding-right: 20%">
+							</div>
+							<span class="glyphicon glyphicon-subtitles form-control-feedback"></span>
+						</div>
+						<p class="text-center bg-green">Данные для подключения:</p>
+						<div class="form-group has-feedback">
+							<label>Лицевой счет</label>
+							<input type="number" class="raz form-control warn info" name="reglogin" placeholder="Лицевой счет" onpaste="return false;" onKeyPress="return check(event,value)" onInput="checkLength(8,this)" required>
+							<span class="glyphicon glyphicon-phone form-control-feedback"></span>
+						</div>
+						<div class="form-group has-feedback">
+							<label>Адрес установки оборудования</label>
+							<textarea class="form-control warn info" name="address" placeholder="Адрес установки оборудования" required></textarea>
+							<span class="glyphicon glyphicon-globe form-control-feedback"></span>
+						</div>
+						<div class="form-group has-feedback">
+							<label>Пароль</label>
+							<input type="password" class="form-control warn info password" name="password" placeholder="Пароль" required>
+							<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+						</div>
+						<div class="form-group has-feedback">
+							<label>Повтор пароля</label>
+							<input type="password" class="form-control warn info password" name="passwordRepeat" placeholder="Повтор пароля" required>
+							<span class="glyphicon glyphicon-lock form-control-feedback"></span>
+						</div>
+						<div class="row">
+							<div class="col-xs-12">
+								<button type="submit" id="addNewClientAdmin" name="addClient" class="btn btn-primary btn-block btn-flat">Регистрация</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

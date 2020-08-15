@@ -1,0 +1,126 @@
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs"><b>Version</b> 0.0.1</div>
+    <strong>Copyright &copy; 2018 <a href="http://localhost">proJect</a>.</strong> All rights reserved.
+  </footer>
+	<div class="control-sidebar-bg"></div>
+</div>
+<!-- jQuery 3 -->
+<script src="/template/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="/template/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- date-range-picker -->
+<script src="/template/bower_components/moment/min/moment.min.js"></script>
+<script src="/template/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- Select2 -->
+<script src="/template/bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="/template/plugins/input-mask/jquery.inputmask.js"></script>
+<script src="/template/plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="/template/plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<!-- DataTables -->
+<script src="/template/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/template/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="/template/plugins/iCheck/icheck.min.js"></script>
+<!-- AdminLTE App -->
+<script src="/template/dist/js/adminlte.min.js"></script>
+<!-- mainjs -->
+<script src="/template/dist/js/main.js?ver=0.1"></script>
+<script>
+  $(function () {
+		$('[data-mask]').inputmask()
+    //Initialize Select2 Elements
+    $('.select2').select2()
+    $('#example1').DataTable({
+      'ordering'    : false,
+			"iDisplayLength": 100
+    })
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false,
+			"iDisplayLength": 50
+    })
+    $('#example3').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : false,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+		$('#example4').DataTable();
+    //Date range picker
+    $('#reservation').daterangepicker({ 
+			locale: { 
+				"format": "DD.MM.YYYY",
+				"separator": " - ",
+				"applyLabel": "Применить",
+				"cancelLabel": "Отмена",
+        "daysOfWeek": [
+            "Вс",
+            "Пн",
+            "Вт",
+            "Ср",
+            "Чт",
+            "Пт",
+            "Сб"
+        ],
+        "monthNames": [
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь"
+        ],
+				"firstDay": 1
+			}
+		})
+		 $('#reservationDkp').daterangepicker({ 
+			locale: { 
+				"format": "DD.MM.YYYY",
+				"separator": " - ",
+				"applyLabel": "Применить",
+				"cancelLabel": "Отмена",
+        "daysOfWeek": [
+            "Вс",
+            "Пн",
+            "Вт",
+            "Ср",
+            "Чт",
+            "Пт",
+            "Сб"
+        ],
+        "monthNames": [
+            "Январь",
+            "Февраль",
+            "Март",
+            "Апрель",
+            "май",
+            "Июнь",
+            "Июль",
+            "Август",
+            "Сентябрь",
+            "Октябрь",
+            "Ноябрь",
+            "Декабрь"
+        ],
+				"firstDay": 1
+			},
+			startDate: new Date(new Date().getTime() - (60*60*24*31*1000)),
+			endDate: new Date
+		})
+  });
+</script>
+</body>
+</html>
